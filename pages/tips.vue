@@ -335,5 +335,33 @@ span{
   font-weight: 600;
 }
 
+@media (max-width: 825px) {
+  .tips-title {
+    font-size: 1.5rem;
+    margin: 20px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .tips-text {
+    margin: 20px;
+    font-size: 0.9rem;
+  }
+
+  .tips-container {
+    margin: 2px 10px;
+    padding: 2px;
+  }
+
+  .p-strong {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+}
+
 
 </style>

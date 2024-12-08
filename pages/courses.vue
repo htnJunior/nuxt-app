@@ -4,7 +4,12 @@
       <p>Todos os cursos</p>
     </div>
     <div class="card">
-      <Carousel :value="products" :numVisible="4" :numScroll="4">
+      <Carousel
+          :value="products"
+          :numVisible="4"
+          :numScroll="1"
+          :responsiveOptions="responsiveOptions"
+      >
         <template #item="slotProps">
           <div class="courses-container">
             <div class="course-image-container">
@@ -37,84 +42,84 @@ import Carousel from 'primevue/carousel';
 
 const products = ref([
   {
-    id: '1000',
+    id: '0',
     name: 'Lógica de Programação',
     description: 'Elegant bamboo watch for every occasion.',
     image: '/logica-de-programacao.jpeg',
     link: 'https://www.youtube.com/watch?v=gMxQ8vxH9Vk'
   },
   {
-    id: '1000',
+    id: '1',
     name: 'Introdução ao Desenvolvimento IOS',
     description: 'Elegant bamboo watch for every occasion.',
     image: '/introducao-dev-ios.jpeg',
     link: 'https://www.youtube.com/watch?v=I8p8KlKEI_Y'
   },
   {
-    id: '1001',
+    id: '2',
     name: 'Computação na Núvem',
     description: 'Stylish sunglasses to complement any outfit.',
     image: '/computacao-nuvem.jpeg',
     link: 'https://www.eucapacito.com.br/cursos/o-que-e-computacao-em-nuvem/',
   },
   {
-    id: '1002',
+    id: '3',
     name: 'Noções Básicas da Internet',
     description: 'Comfortable cotton t-shirt in vibrant blue.',
     image: '/nocoes-basicas-internet.jpeg',
     link: 'https://www.eucapacito.com.br/cursos/nocoes-basicas-da-internet/',
   },
   {
-    id: '1003',
+    id: '4',
     name: 'Introdução à Análise de Dados',
     description: 'High-quality headset with surround sound.',
     image: '/desenvolvimento-web-microsoft.png',
     link: 'https://www.eucapacito.com.br/cursos/cintroducao-a-analise-de-dados-da-microsoft/',
   },
   {
-    id: '1007',
+    id: '5',
     name: 'C# para Iniciantes',
     description: 'Comfortable wrist band for daily use.',
     image: '/csharp-iniciantes.jpeg',
     link: 'https://learn.microsoft.com/pt-br/shows/csharp-for-beginners/',
   },
   {
-    id: '1004',
+    id: '6',
     name: 'Introdução ao Desenvolvimento para a Web',
     description: 'Premium leather handbag with multiple compartments.',
     image: '/desenvolvimento-web-microsoft.png',
     link: 'https://learn.microsoft.com/pt-br/training/modules/get-started-with-web-development/1-introduction',
   },
   {
-    id: '1005',
+    id: '7',
     name: 'Python para iniciantes',
     description: 'Durable case for all smartphone models.',
     image: '/desenvolvimento-web-microsoft.png',
     link: 'https://learn.microsoft.com/pt-br/training/paths/beginner-python/',
   },
   {
-    id: '1007',
+    id: '8',
     name: 'Conceitos básicos da rede de computadores',
     description: 'Comfortable wrist band for daily use.',
     image: '/desenvolvimento-web-microsoft.png',
     link: 'https://learn.microsoft.com/pt-br/training/modules/network-fundamentals/',
   },
   {
-    id: '1004',
+    id: '9',
     name: 'Conceitos básicos da segurança de rede',
     description: 'Premium leather handbag with multiple compartments.',
     image: '/desenvolvimento-web-microsoft.png',
     link: 'https://learn.microsoft.com/pt-br/training/modules/network-fundamentals-2/',
   },
   {
-    id: '1005',
+    id: '10',
     name: 'Introdução ao Python',
     description: 'Durable case for all smartphone models.',
     image: '/desenvolvimento-web-microsoft.png',
     link: 'https://learn.microsoft.com/pt-br/training/modules/intro-to-python/',
   },
   {
-    id: '1006',
+    id: '11',
     name: 'Introdução aos conceitos básicos do Microsoft Azure',
     description: 'Stylish and sturdy wooden chair for your home.',
     image: '/desenvolvimento-web-microsoft.png',
@@ -122,15 +127,27 @@ const products = ref([
   },
 ]);
 
+const responsiveOptions = [
+  {
+    breakpoint: '575px',
+    numVisible: 1,
+    numScroll: 1
+  },
+  {
+    breakpoint: '767px',
+    numVisible: 2,
+    numScroll: 1
+  },
+  {
+    breakpoint: '1199px',
+    numVisible: 3,
+    numScroll: 2
+  }
+];
+
 </script>
 
 <style scoped>
-
-.courses-title{
-  font-weight: 400;
-  font-size: 2rem;
-  margin: 40px;
-}
 
 .courses-subtitle{
   margin: 40px;
@@ -191,6 +208,57 @@ const products = ref([
 
 .button-course{
   background-color: #FF0033;
+}
+
+@media (max-width: 775px) {
+
+  .courses-container {
+    width: 100%;
+  }
+
+  .course-image {
+    height: 180px;
+  }
+
+  .courses-subtitle {
+    margin: 20px;
+    font-size: 1rem;
+  }
+
+  .courses-subtitle p {
+    font-size: 0.9rem;
+  }
+
+  .courses-container {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .course-image-container {
+    width: 100%;
+  }
+
+  .course-image {
+    height: 180px;
+    border-radius: 8px;
+  }
+
+  .course-name {
+    font-size: 0.9rem;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .course-link {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .button-course {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 5px;
+  }
 }
 
 

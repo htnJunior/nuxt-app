@@ -190,5 +190,123 @@
   text-indent: 2em;
 }
 
+@media (max-width: 800px) {
+  .inspirations-title {
+    font-size: 1.5rem;
+    width: 90%;
+    margin-left: 15px;
+  }
+
+  .inspirations-description {
+    font-size: 0.9rem;
+    margin: 15px 0;
+    padding: 8px;
+  }
+
+  .inpirations-body {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .inspirations-title-woman {
+    font-size: 1.5rem;
+    margin: 10px 15px;
+  }
+
+  .inspirations-text {
+    flex-direction: column;
+    margin: 10px;
+    height: auto;
+    padding: 5px;
+  }
+
+  .image-example-small,
+  .image-example-big {
+    height: auto;
+    width: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    max-height: 450px;
+  }
+
+  .image-portait {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .inspirations-text-body {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .inspirations-text-body p:first-child {
+    text-indent: 1em;
+  }
+}
+
+@media (max-width: 1440px) {
+  .inspirations-title {
+    font-size: 1.5rem;
+    width: 90%;
+    margin-left: 15px;
+  }
+
+  .inspirations-description {
+    font-size: 1rem;
+    margin: 15px 0;
+    padding: 8px;
+  }
+
+  .inpirations-body {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .inspirations-title-woman {
+    font-size: 1.5rem;
+    margin: 10px 15px;
+  }
+
+  .inspirations-text {
+    margin: 10px;
+    height: auto;
+    padding: 5px;
+  }
+
+  .image-example-small{
+    height: 750px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+
+  .image-example-big {
+    height: 650px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+
+  .image-portait {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .inspirations-text-body {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .inspirations-text-body p:first-child {
+    text-indent: 1em;
+  }
+}
+
 
 </style>

@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@primevue/nuxt-module'],
   plugins: [
-    { src: '~/plugins/primevue.js', mode: 'client' }
+    { src: '~/plugins/primevue.js', mode: 'client' },
   ],
   app: {
     baseURL: '/',

@@ -29,19 +29,17 @@
                     {{ item.price }}
                   </span>
                   </div>
-                  <div class="product-actions">
-                    <div class="product-buttons">
-                      <a :href="item.link" target="_blank" rel="noopener noreferrer">
-                        <Button
-                            label="Inscreva-se"
-                            icon="pi pi-briefcase"
-                            iconPos="right"
-                            severity="danger"
-                            variant="text"
-                            raised
-                        />
-                      </a>
-                    </div>
+                  <div class="product-buttons">
+                    <a :href="item.link" target="_blank" rel="noopener noreferrer">
+                      <Button
+                          label="Inscreva-se"
+                          icon="pi pi-briefcase"
+                          iconPos="right"
+                          severity="danger"
+                          variant="text"
+                          raised
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -225,13 +223,6 @@ const products = ref([
   color: #ffc107;
 }
 
-.product-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2rem;
-}
-
 .product-price {
   font-size: 1.25rem;
   font-weight: 600;
@@ -243,7 +234,7 @@ const products = ref([
   margin: 5px;
   font-size: 1.4rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .product-buy-button {
@@ -251,7 +242,65 @@ const products = ref([
   white-space: nowrap;
 }
 
+@media (max-width: 825px) {
+  .products {
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+  }
 
+  .courses-title {
+    font-size: 1.5rem;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+  }
 
+  .product-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .product-info {
+    gap: 1rem;
+  }
+
+  .product-tags{
+    font-size: 0.4rem;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+    margin: 5px;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    margin: 2px;
+  }
+
+  .product-rating-wrapper {
+    padding: 0.2rem;
+  }
+
+  .product-rating {
+    padding: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .product-buttons {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-buy-button {
+    white-space: normal;
+  }
+}
 
 </style>

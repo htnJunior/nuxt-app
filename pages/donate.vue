@@ -51,10 +51,11 @@
 
 .donate-body{
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  flex-direction: column;
   gap: 40px;
   margin: 40px;
-  justify-content: center;
+  width: 100%;
 }
 
 .donate-body-title {
@@ -63,10 +64,40 @@
   font-size: 2rem;
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .donate-body-title:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 425px) {
+  .donate-title {
+    font-size: 1.5rem;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .donate-text {
+    margin: 40px;
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .donate-body {
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .donate-body-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .donate-body-title:hover {
+    transform: none;
+  }
 }
 
 </style>

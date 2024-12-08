@@ -113,9 +113,6 @@
         />
       </div>
     </div>
-<!--    <div class="inspirations-section">-->
-<!--      <Inspirations />-->
-<!--    </div>-->
   </div>
 </template>
 
@@ -224,9 +221,9 @@ const goToOportunities = () => {
   justify-content: center;
 }
 
-.main-image{
-  display: flex;
-  width: 100%;
+.main-image img {
+  width: 100%; /* Ajusta ao container */
+  height: auto; /* Mantém a proporção */
 }
 
 .main-image img{
@@ -262,6 +259,60 @@ const goToOportunities = () => {
   animation: slidedown-icon;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 1rem;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-cards {
+    flex-direction: column; /* Empilha os cards */
+    gap: 15px;
+  }
+
+  .info-card-body {
+    width: 100%; /* Ajusta a largura ao container */
+    height: auto; /* Permite altura dinâmica */
+  }
+
+  .woman-tech-image {
+    height: auto; /* Ajusta a imagem */
+    width: 100%; /* Preenche a largura */
+  }
+
+  .course-list {
+    flex-direction: column; /* Empilha os cursos */
+    margin: 0 10px;
+  }
+
+  .section-title {
+    font-size: 1.5rem; /* Reduz tamanho do título */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .all-courses-tag {
+    font-size: 1rem;
+  }
+
+  .course-title {
+    font-size: 1.2rem;
+  }
+
+  .course-icon {
+    font-size: 2rem;
+  }
 }
 
 </style>
