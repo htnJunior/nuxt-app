@@ -261,7 +261,7 @@ const goToOportunities = () => {
   animation-iteration-count: infinite;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .intro-text {
     font-size: 1rem;
     padding: 10px;
@@ -271,27 +271,27 @@ const goToOportunities = () => {
   }
 
   .info-cards {
-    flex-direction: column; /* Empilha os cards */
+    flex-direction: column;
     gap: 15px;
   }
 
   .info-card-body {
-    width: 100%; /* Ajusta a largura ao container */
-    height: auto; /* Permite altura dinâmica */
+    width: 100%;
+    height: auto;
   }
 
   .woman-tech-image {
-    height: auto; /* Ajusta a imagem */
-    width: 100%; /* Preenche a largura */
+    height: auto;
+    width: 100%;
   }
 
   .course-list {
-    flex-direction: column; /* Empilha os cursos */
+    flex-direction: column;
     margin: 0 10px;
   }
 
   .section-title {
-    font-size: 1.5rem; /* Reduz tamanho do título */
+    font-size: 1.5rem;
     text-align: center;
   }
 }

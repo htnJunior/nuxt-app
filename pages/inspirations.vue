@@ -190,7 +190,7 @@
   text-indent: 2em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .inspirations-title {
     font-size: 1.5rem;
     width: 90%;
@@ -246,7 +246,7 @@
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1540px) {
   .inspirations-title {
     font-size: 1.5rem;
     width: 90%;
@@ -277,16 +277,16 @@
   }
 
   .image-example-small{
-    height: 750px;
-    width: 100%;
+    height: 450px;
+    width: 350px;
     border-radius: 6px;
     margin-bottom: 15px;
     padding: 20px;
   }
 
   .image-example-big {
-    height: 650px;
-    width: 100%;
+    height: 450px;
+    width: 500px;
     border-radius: 6px;
     margin-bottom: 15px;
     padding: 20px;

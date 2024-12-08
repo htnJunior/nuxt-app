@@ -3,7 +3,7 @@
     <div class="courses-subtitle">
       <p>Todos os cursos</p>
     </div>
-    <div class="card">
+    <div class="card" v-if="showCarousel">
       <Carousel
           :value="products"
           :numVisible="4"
@@ -33,11 +33,32 @@
         </template>
       </Carousel>
     </div>
+    <div v-else class="courses-column">
+      <div v-for="product in products" :key="product.id" class="courses-container">
+        <div class="course-image-container">
+          <img :src="product.image" :alt="product.name" class="course-image" />
+        </div>
+        <div class="course-name">
+          {{ product.name }}
+        </div>
+        <div class="course-link">
+          <a :href="product.link" target="_blank" rel="noopener noreferrer">
+            <Button
+                severity="danger"
+                icon="pi pi-youtube"
+                class="button-course"
+                label="Assistir Curso"
+                raised
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, watchEffect } from "vue";
 import Carousel from 'primevue/carousel';
 
 const products = ref([
@@ -139,11 +160,29 @@ const responsiveOptions = [
     numScroll: 1
   },
   {
-    breakpoint: '1199px',
+    breakpoint: '1400px',
     numVisible: 3,
     numScroll: 2
   }
 ];
+
+const screenWidth = ref(0);
+const showCarousel = ref(true);
+
+onMounted(() => {
+  if (typeof window !== 'undefined') {
+    screenWidth.value = window.innerWidth;
+    window.addEventListener('resize', updateWidth);
+  }
+});
+
+const updateWidth = () => {
+  screenWidth.value = window.innerWidth;
+};
+
+watchEffect(() => {
+  showCarousel.value = screenWidth.value > 770;
+});
 
 </script>
 
@@ -212,14 +251,6 @@ const responsiveOptions = [
 
 @media (max-width: 775px) {
 
-  .courses-container {
-    width: 100%;
-  }
-
-  .course-image {
-    height: 180px;
-  }
-
   .courses-subtitle {
     margin: 20px;
     font-size: 1rem;
@@ -236,10 +267,13 @@ const responsiveOptions = [
 
   .course-image-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .course-image {
-    height: 180px;
+    height: 150px;
+    width: 350px;
     border-radius: 8px;
   }
 

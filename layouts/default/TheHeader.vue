@@ -78,11 +78,7 @@ const goToHome = () => {
   cursor: pointer;
 }
 
-.mulheres-img {
-  display: none;
-}
-
-@media (max-width: 425px) {
+@media (max-width: 700px) {
   .top-icons {
     flex-direction: column;
     align-items: center;
@@ -107,6 +103,10 @@ const goToHome = () => {
   .logo-mtech {
     width: 60px;
     height: 60px;
+  }
+
+  .mulheres-img{
+    display: none;
   }
 
 }
